@@ -50,6 +50,36 @@ st.markdown(
 )
 ```
 
+### 🎨 Cores nos gráficos com Plotly
+
+Use `color_discrete_map` para definir uma cor específica para cada categoria do gráfico.
+
+```python
+grafico = px.bar(
+    tabela,
+    x="vendedor",
+    y="valor",
+    color="produto",
+    color_discrete_map={
+        "Notebook": "blue",
+        "Celular": "green",
+        "Fone": "orange"
+    }
+)
+```
+
+Também é possível usar cores em hexadecimal:
+
+```python
+color_discrete_map={
+    "Notebook": "#4F46E5",
+    "Celular": "#22C55E",
+    "Fone": "#F59E0B"
+}
+```
+
+Isso ajuda a manter as mesmas cores para cada categoria em diferentes gráficos.
+
 ## 📌 Campos obrigatórios
 
 O Streamlit não possui `required=True`, então a validação deve ser feita manualmente.
