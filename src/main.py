@@ -11,13 +11,28 @@ tabela_vendas = pd.read_csv("data/vendas.csv")
 
 st.write("# Sistema de Vendas")
 
-st.write("## Cadastrar Vendas")
-data = st.date_input("Data")
-vendedor = st.selectbox("Vendedor", ["Chrystine", "Noob", "Leon"])
-produto = st.selectbox("Produto", ["Notebook", "Celular", "Fone"])
-quantidade = st.number_input("Quantidade", step=1)
-valor = st.number_input("Valor")
-botao_cadastar = st.button("Cadastrar Venda")
+st.sidebar.write("## Cadastrar Vendas")
+data = st.sidebar.date_input("Data", min_value="2027/01/01")
+vendedor = st.sidebar.selectbox("Vendedor", ["Ana", "Bruno", "Carla"], index=None, placeholder="Selecione um vendedor")
+produto = st.sidebar.selectbox("Produto", ["Notebook", "Celular", "Fone"], index=None, placeholder="Selecione um produto")
+quantidade = st.sidebar.number_input("Quantidade", step=1)
+valor = st.sidebar.number_input("Valor")
+botao_cadastrar = st.sidebar.button("Cadastrar Venda")
+
+if botao_cadastrar:
+
+    if valor <= 0 or quantidade == 0 or vendedor is None or produto is None:
+        st.warning("Venda com erros de preenchimento")
+
+    else:
+        nova_venda = [str(data), vendedor, produto, quantidade, valor]
+        ultima_linha = len(tabela_vendas)
+
+        tabela_vendas.loc[ultima_linha] = nova_venda
+        tabela_vendas.to_csv("data/vendas.csv", index=False)
+
+        st.success("Venda Cadastrada!")
+
 
 
 st.write("## Vendas Cadastradas")
