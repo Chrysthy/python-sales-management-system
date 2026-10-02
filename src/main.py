@@ -27,3 +27,9 @@ st.dataframe(tabela_vendas)
 st.write("## Dashboard")
 faturamento = tabela_vendas["valor"].sum()
 st.metric("Faturamento total", f"R$ {faturamento}")
+
+grafico1 = px.bar(tabela_vendas, x="vendedor", y="valor", color="produto")
+st.plotly_chart(grafico1)
+
+grafico2 = px.pie(tabela_vendas, names="produto", values="valor", hole=0.5) 
+st.plotly_chart(grafico2)
