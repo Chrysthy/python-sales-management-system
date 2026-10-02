@@ -244,12 +244,36 @@ st.rerun()
 
 ## ▶️ Executar a aplicação
 
+### Forma recomendada
+
 ```bash
-streamlit run app.py
+python -m streamlit run src/main.py
 ```
 
-Se o arquivo tiver outro nome:
+Essa forma funciona bem tanto localmente quanto no GitHub Codespaces.
+
+### Forma alternativa
 
 ```bash
-streamlit run nome_do_arquivo.py
+streamlit run src/main.py
+```
+
+Em alguns ambientes, como o GitHub Codespaces, o comando `streamlit` pode não estar disponível diretamente no `PATH`, mesmo com a biblioteca instalada.
+
+Nesse caso, utilize:
+
+```bash
+python -m streamlit run src/main.py
+```
+
+### Verificar se o Streamlit está instalado
+
+```bash
+python -m streamlit --version
+```
+
+### Instalar as dependências do projeto
+
+```bash
+pip install -r requirements.txt
 ```
