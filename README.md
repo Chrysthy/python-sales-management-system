@@ -57,3 +57,35 @@ The project was developed step by step to practice building web applications wit
 - Interactive charts with Plotly
 
 <br>
+
+## 🔄 Workflow
+
+### Step 1: Create the system interface
+
+Build the main application interface using Streamlit.
+
+### Step 2: Create the sales registration form
+
+Create a form to collect:
+
+- Date
+- Seller
+- Product
+- Quantity
+- Sale value
+
+### Step 3: Validate and save the sale
+
+Validate the information entered by the user and add valid sales to the dataset.
+
+The updated data is then saved to the CSV file.
+
+### Step 4: Display registered sales
+
+Show the complete sales dataset directly in the application using a Pandas DataFrame.
+
+### Step 5: Create the dashboard
+
+Calculate sales metrics and create interactive charts to visualize the data.
+
+<br>
