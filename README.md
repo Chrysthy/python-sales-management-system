@@ -12,7 +12,6 @@
   <a href="#-features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-workflow">Workflow</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-installation">Installation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-additional-information">Additional Information</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-license">License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-contributing">Contributing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#support">Support</a>  
@@ -126,3 +125,12 @@ streamlit run src/main.py
 > In some environments, such as GitHub Codespaces, `python -m streamlit` may work better if the `streamlit` command is not available directly in the PATH.
 
 <br>
+
+<br>
+
+## 📄 License
+
+This project is for educational and portfolio purposes.
+
+<br>
+
