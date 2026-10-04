@@ -41,3 +41,19 @@ The application allows users to register new sales, save the information in a CS
 The project was developed step by step to practice building web applications with Python, working with data using Pandas, and creating interactive visualizations with Plotly.
 
 <br>
+
+## ✨ Features
+
+- Register new sales
+- Select seller and product
+- Enter sale date, quantity, and value
+- Validate required information
+- Save new sales to a CSV file
+- Display registered sales in a table
+- Calculate total revenue
+- Display sales metrics
+- Visualize sales by seller
+- Visualize sales distribution by product
+- Interactive charts with Plotly
+
+<br>
