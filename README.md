@@ -20,3 +20,14 @@
 </p>
 
 <br>
+
+## 🛠 Technologies
+
+- Python
+- Streamlit
+- Pandas
+- Plotly
+- CSV
+- Git and GitHub
+
+<br>
