@@ -16,8 +16,10 @@ st.sidebar.write("## Cadastrar Vendas")
 with st.sidebar.form(key="formulario_vendas", clear_on_submit=True):
 
     data = st.date_input("Data", min_value="2027-01-01")
-    vendedor = st.selectbox("Vendedor", ["Noob", "Leon", "Collin"], index=None, placeholder="Selecione um vendedor")
-    produto = st.selectbox("Produto", ["Notebook", "Celular", "Fone"], index=None, placeholder="Selecione um produto")
+    vendedor = st.selectbox("Vendedor", [
+                            "Noob", "Leon", "Collin"], index=None, placeholder="Selecione um vendedor")
+    produto = st.selectbox("Produto", [
+                           "Notebook", "Celular", "Fone"], index=None, placeholder="Selecione um produto")
     quantidade = st.number_input("Quantidade", step=1)
     valor = st.number_input("Valor")
     botao_cadastrar = st.form_submit_button("Cadastrar Venda")
@@ -37,7 +39,6 @@ if botao_cadastrar:
         st.success("Venda Cadastrada!")
 
 
-
 st.write("## Vendas Cadastradas")
 st.dataframe(tabela_vendas)
 
@@ -46,8 +47,14 @@ st.write("## Dashboard")
 faturamento = tabela_vendas["valor"].sum()
 st.metric("Faturamento total", f"R$ {faturamento}")
 
-grafico1 = px.bar(tabela_vendas, x="vendedor", y="valor", color="produto")
+cores_produtos = {
+    "Notebook": "#4F46E5",
+    "Celular":  "#22C55E",
+    "Fone": "#F59E0B"
+}
+
+grafico1 = px.bar(tabela_vendas, x="vendedor", y="valor", color="produto", color_discrete_map=cores_produtos)
 st.plotly_chart(grafico1)
 
-grafico2 = px.pie(tabela_vendas, names="produto", values="valor", hole=0.5) 
+grafico2 = px.pie(tabela_vendas, names="produto", values="valor", hole=0.5, color="produto", color_discrete_map=cores_produtos)
 st.plotly_chart(grafico2)
