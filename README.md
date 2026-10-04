@@ -11,7 +11,6 @@
   <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-workflow">Workflow</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-dashboard">Dashboard</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-installation">Installation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-additional-information">Additional Information</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-license">License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -87,5 +86,43 @@ Show the complete sales dataset directly in the application using a Pandas DataF
 ### Step 5: Create the dashboard
 
 Calculate sales metrics and create interactive charts to visualize the data.
+
+<br>
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Chrysthy/python-sales-management-system.git
+```
+
+Access the project folder:
+
+```bash
+cd python-sales-management-system
+```
+
+Install the dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the Streamlit application:
+
+```bash
+python -m streamlit run src/main.py
+```
+
+The application will open in your browser.
+
+You can also run the application with:
+
+```bash
+streamlit run src/main.py
+```
+
+> In some environments, such as GitHub Codespaces, `python -m streamlit` may work better if the `streamlit` command is not available directly in the PATH.
 
 <br>
