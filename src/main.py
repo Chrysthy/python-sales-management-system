@@ -12,12 +12,15 @@ tabela_vendas = pd.read_csv("data/vendas.csv")
 st.write("# Sistema de Vendas")
 
 st.sidebar.write("## Cadastrar Vendas")
-data = st.sidebar.date_input("Data", min_value="2027/01/01")
-vendedor = st.sidebar.selectbox("Vendedor", ["Ana", "Bruno", "Carla"], index=None, placeholder="Selecione um vendedor")
-produto = st.sidebar.selectbox("Produto", ["Notebook", "Celular", "Fone"], index=None, placeholder="Selecione um produto")
-quantidade = st.sidebar.number_input("Quantidade", step=1)
-valor = st.sidebar.number_input("Valor")
-botao_cadastrar = st.sidebar.button("Cadastrar Venda")
+
+with st.sidebar.form(key="formulario_vendas", clear_on_submit=True):
+
+    data = st.sidebar.date_input("Data", min_value="2027-01-01")
+    vendedor = st.sidebar.selectbox("Vendedor", ["Noob", "Leon", "Collin"], index=None, placeholder="Selecione um vendedor")
+    produto = st.sidebar.selectbox("Produto", ["Notebook", "Celular", "Fone"], index=None, placeholder="Selecione um produto")
+    quantidade = st.sidebar.number_input("Quantidade", step=1)
+    valor = st.sidebar.number_input("Valor")
+    botao_cadastrar = st.sidebar.button("Cadastrar Venda")
 
 if botao_cadastrar:
 
