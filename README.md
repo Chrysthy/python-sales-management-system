@@ -31,3 +31,13 @@
 - Git and GitHub
 
 <br>
+
+## 💻 Project
+
+This project is a sales management system developed with Python and Streamlit.
+
+The application allows users to register new sales, save the information in a CSV file, view registered sales, and analyze sales data through an interactive dashboard.
+
+The project was developed step by step to practice building web applications with Python, working with data using Pandas, and creating interactive visualizations with Plotly.
+
+<br>
