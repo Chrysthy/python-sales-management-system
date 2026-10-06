@@ -128,7 +128,7 @@ streamlit run src/main.py
 
 <br>
 
-## 📄 License
+## 📜 License
 
 This project is for educational and portfolio purposes.
 
@@ -140,4 +140,7 @@ This project is for educational and portfolio purposes.
 <p> Contributions, issues, and feature requests are welcome! Please, feel free to do it! 😉 </p>
 
 <br>
+
+## 🌟 Support
+<p> If you like this project, please give it a star ⭐ and share it with others! 😄 </p>
 
